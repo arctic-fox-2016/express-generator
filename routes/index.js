@@ -14,7 +14,7 @@ router.get('/about', (request, res) => {
 	db.collection('login').find().toArray(function(err, results) {
 		if (err) return console.log(err)
 		// render index.ejs
-		res.render('about.jade', {lili: results})
+		res.render('about.jade', {users: results})
 	})
 })
 
